@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "city_pages",
+  "info": {
+    "singularName": "city-page",
+    "pluralName": "city-pages",
+    "displayName": "City Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Slug_Active": {
+      "type": "boolean",
+      "default": false
+    },
+    "city": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "Hero_Section": {
+      "type": "component",
+      "component": "components.hero-section",
+      "repeatable": true
+    },
+    "ServiceCard": {
+      "type": "component",
+      "component": "components.services-grid",
+      "repeatable": true
+    },
+    "SideSection": {
+      "type": "component",
+      "component": "template1.side-section",
+      "repeatable": true
+    },
+    "Faq": {
+      "type": "component",
+      "component": "components.faq",
+      "repeatable": false
+    },
+    "Fleetsection": {
+      "type": "component",
+      "component": "components.fleets-section",
+      "repeatable": false
+    },
+    "Faqimage": {
+      "type": "component",
+      "component": "components.faq-image-section",
+      "repeatable": false
+    },
+    "MainRoute": {
+      "type": "component",
+      "component": "components.main-route",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "components.seo-tags",
+      "repeatable": false
+    }
+  }
+}

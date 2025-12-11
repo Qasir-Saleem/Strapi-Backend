@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_components_faq_image_sections",
+  "info": {
+    "displayName": "faq_imageSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "richtext": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Faq_Data": {
+      "type": "component",
+      "component": "components.faq-data",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

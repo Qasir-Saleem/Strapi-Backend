@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_template1_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ServiceCard": {
+      "type": "component",
+      "component": "template1.service-intro",
+      "repeatable": true
+    },
+    "SideSection": {
+      "type": "component",
+      "component": "template1.side-section",
+      "repeatable": true
+    },
+    "Faq_Data": {
+      "type": "component",
+      "component": "components.faq",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

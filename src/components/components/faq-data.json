@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_faq_data",
+  "info": {
+    "displayName": "Faq_Data"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "richtext": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

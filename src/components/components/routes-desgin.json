@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_routes_desgins",
+  "info": {
+    "displayName": "routesDesgin"
+  },
+  "options": {},
+  "attributes": {
+    "routename": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "distance": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

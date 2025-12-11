@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_fleets",
+  "info": {
+    "displayName": "Fleets"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "richtext": {
+      "type": "blocks"
+    },
+    "Fleet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

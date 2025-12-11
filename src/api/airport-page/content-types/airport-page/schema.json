@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "airport_pages",
+  "info": {
+    "singularName": "airport-page",
+    "pluralName": "airport-pages",
+    "displayName": "Airport Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Meta_Title": {
+      "type": "string"
+    },
+    "Meta_Description": {
+      "type": "text"
+    },
+    "cannonicalUrl": {
+      "type": "string"
+    },
+    "IsActive": {
+      "type": "boolean",
+      "default": false
+    },
+    "Hero_Section": {
+      "type": "component",
+      "component": "components.hero",
+      "repeatable": false
+    },
+    "SideSection": {
+      "type": "component",
+      "component": "template1.side-section",
+      "repeatable": false
+    },
+    "IconsSection": {
+      "type": "component",
+      "component": "components.first-icons",
+      "repeatable": false
+    },
+    "airportsection": {
+      "type": "component",
+      "component": "components.airportsection",
+      "repeatable": false
+    },
+    "TravelSection": {
+      "type": "component",
+      "component": "components.airportsection",
+      "repeatable": false
+    },
+    "JfkAirports": {
+      "type": "component",
+      "component": "components.first-icons",
+      "repeatable": false
+    },
+    "contactUs": {
+      "type": "component",
+      "component": "components.airportsection",
+      "repeatable": false
+    },
+    "Faq": {
+      "type": "component",
+      "component": "components.faq",
+      "repeatable": false
+    }
+  }
+}

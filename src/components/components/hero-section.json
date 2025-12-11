@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_components_hero_sections",
+  "info": {
+    "displayName": "Hero_Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descriptio1": {
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "altTags": {
+      "type": "text"
+    },
+    "ImageTitlte": {
+      "type": "text"
+    },
+    "bgimage1": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_main_routes",
+  "info": {
+    "displayName": "mainRoute"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "route": {
+      "type": "component",
+      "component": "components.routes-desgin",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

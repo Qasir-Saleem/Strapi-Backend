@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_components_fleets_sections",
+  "info": {
+    "displayName": "FleetsSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "richtext": {
+      "type": "blocks"
+    },
+    "Fleet": {
+      "type": "component",
+      "component": "components.fleets",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
