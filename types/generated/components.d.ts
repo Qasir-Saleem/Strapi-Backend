@@ -1,42 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface BlocksData extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_data_s';
-  info: {
-    displayName: 'data ';
-  };
-  attributes: {};
-}
-
-export interface BlocksHeroSection extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_hero_sections';
-  info: {
-    displayName: 'Hero Section';
-  };
-  attributes: {
-    cta: Schema.Attribute.Component<'elements.link', false>;
-    heading: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images'>;
-    logo: Schema.Attribute.Component<'elements.logo', false>;
-    theme: Schema.Attribute.Enumeration<['turquorise', 'orange']>;
-  };
-}
-
-export interface BlocksInfoBlock extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_info_blocks';
-  info: {
-    displayName: 'info block';
-  };
-  attributes: {
-    content: Schema.Attribute.RichText;
-    cta: Schema.Attribute.Component<'elements.link', false>;
-    headline: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images'>;
-    reverse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    theme: Schema.Attribute.Enumeration<['Turquoise  ', 'orange']>;
-  };
-}
-
 export interface ComponentsAbout extends Struct.ComponentSchema {
   collectionName: 'components_components_abouts';
   info: {
@@ -76,6 +39,17 @@ export interface ComponentsContactUs extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsCtaBanner extends Struct.ComponentSchema {
+  collectionName: 'components_components_cta_banners';
+  info: {
+    displayName: 'CtaBanner';
+  };
+  attributes: {
+    richtext: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsFaq extends Struct.ComponentSchema {
   collectionName: 'components_components_faqs';
   info: {
@@ -94,6 +68,7 @@ export interface ComponentsFaqData extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images', true>;
     richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
@@ -105,8 +80,9 @@ export interface ComponentsFaqImageSection extends Struct.ComponentSchema {
     displayName: 'faq_imageSection';
   };
   attributes: {
-    description: Schema.Attribute.Text;
     Faq_Data: Schema.Attribute.Component<'components.faq-data', true>;
+    form_description: Schema.Attribute.String;
+    form_title: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images', true>;
     richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
@@ -132,8 +108,7 @@ export interface ComponentsFleets extends Struct.ComponentSchema {
     displayName: 'Fleets';
   };
   attributes: {
-    Description: Schema.Attribute.Text;
-    Fleet: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images'>;
     richtext: Schema.Attribute.Blocks;
     Title: Schema.Attribute.String;
   };
@@ -145,10 +120,21 @@ export interface ComponentsFleetsSection extends Struct.ComponentSchema {
     displayName: 'FleetsSection';
   };
   attributes: {
-    description: Schema.Attribute.Text;
     Fleet: Schema.Attribute.Component<'components.fleets', true>;
     richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentsFooterheading extends Struct.ComponentSchema {
+  collectionName: 'components_components_footerheadings';
+  info: {
+    displayName: 'footerheading';
+  };
+  attributes: {
+    richtext: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+    title_two: Schema.Attribute.String;
   };
 }
 
@@ -171,11 +157,22 @@ export interface ComponentsHeroSection extends Struct.ComponentSchema {
   };
   attributes: {
     altTags: Schema.Attribute.Text;
-    bgImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    bgimage1: Schema.Attribute.Media<'images'>;
+    BgCover_1920x600: Schema.Attribute.Media<'images'>;
     descriptio1: Schema.Attribute.Text;
-    description: Schema.Attribute.Blocks;
     ImageTitlte: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentsMainMultiData extends Struct.ComponentSchema {
+  collectionName: 'components_components_main_multi_data';
+  info: {
+    displayName: 'mainMultiData';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    multi: Schema.Attribute.Component<'components.multi-data', true>;
+    richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }
@@ -192,14 +189,50 @@ export interface ComponentsMainRoute extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsMajorRouteGrids extends Struct.ComponentSchema {
+  collectionName: 'components_components_major_route_grids';
+  info: {
+    displayName: 'MajorRouteGrids';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'components.routes-desgin', true>;
+    richtext: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+    titlebasker: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentsMultiData extends Struct.ComponentSchema {
+  collectionName: 'components_components_multi_data';
+  info: {
+    displayName: 'multiData';
+  };
+  attributes: {
+    faq: Schema.Attribute.Component<'components.faq-data', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentsReview extends Struct.ComponentSchema {
+  collectionName: 'components_components_reviews';
+  info: {
+    displayName: 'Review';
+  };
+  attributes: {
+    comment: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsRoutesDesgin extends Struct.ComponentSchema {
   collectionName: 'components_components_routes_desgins';
   info: {
     displayName: 'routesDesgin';
   };
   attributes: {
-    description: Schema.Attribute.Text;
     distance: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images', true>;
+    richtext: Schema.Attribute.Blocks;
     routename: Schema.Attribute.String;
     time: Schema.Attribute.String;
   };
@@ -239,7 +272,6 @@ export interface ComponentsServiceCard extends Struct.ComponentSchema {
   };
   attributes: {
     altstext: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
     richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
@@ -265,137 +297,40 @@ export interface ComponentsSideSection extends Struct.ComponentSchema {
   };
   attributes: {
     altTags: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images', true>;
+    richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
+    title_two: Schema.Attribute.String;
   };
-}
-
-export interface ElementsLink extends Struct.ComponentSchema {
-  collectionName: 'components_elements_links';
-  info: {
-    displayName: 'Link';
-  };
-  attributes: {
-    href: Schema.Attribute.String;
-    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    text: Schema.Attribute.String;
-  };
-}
-
-export interface ElementsLogo extends Struct.ComponentSchema {
-  collectionName: 'components_elements_logo_s';
-  info: {
-    displayName: 'Logo ';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images'>;
-    LogoText: Schema.Attribute.String;
-  };
-}
-
-export interface Template1GridCard extends Struct.ComponentSchema {
-  collectionName: 'components_template1_grid_cards';
-  info: {
-    displayName: 'GridCard';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface Template1HeroSection extends Struct.ComponentSchema {
-  collectionName: 'components_template1_hero_sections';
-  info: {
-    displayName: 'Hero Section';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    Faq_Data: Schema.Attribute.Component<'components.faq', true>;
-    image: Schema.Attribute.Media<'images', true>;
-    ServiceCard: Schema.Attribute.Component<'template1.service-intro', true>;
-    SideSection: Schema.Attribute.Component<'template1.side-section', true>;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface Template1PageJs extends Struct.ComponentSchema {
-  collectionName: 'components_template1_page_js';
-  info: {
-    displayName: 'Page.js';
-  };
-  attributes: {};
-}
-
-export interface Template1ServiceIntro extends Struct.ComponentSchema {
-  collectionName: 'components_template1_service_intros';
-  info: {
-    displayName: 'ServiceIntro';
-  };
-  attributes: {
-    Cards: Schema.Attribute.Component<'template1.grid-card', true>;
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface Template1SideSection extends Struct.ComponentSchema {
-  collectionName: 'components_template1_side_sections';
-  info: {
-    displayName: 'Side_Section';
-  };
-  attributes: {
-    description: Schema.Attribute.Blocks;
-    image: Schema.Attribute.Media<'images', true>;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface Template2PageJs extends Struct.ComponentSchema {
-  collectionName: 'components_template2_page_js';
-  info: {
-    displayName: 'page.js';
-  };
-  attributes: {};
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'blocks.data': BlocksData;
-      'blocks.hero-section': BlocksHeroSection;
-      'blocks.info-block': BlocksInfoBlock;
       'components.about': ComponentsAbout;
       'components.airportsection': ComponentsAirportsection;
       'components.contact-us': ComponentsContactUs;
+      'components.cta-banner': ComponentsCtaBanner;
       'components.faq': ComponentsFaq;
       'components.faq-data': ComponentsFaqData;
       'components.faq-image-section': ComponentsFaqImageSection;
       'components.first-icons': ComponentsFirstIcons;
       'components.fleets': ComponentsFleets;
       'components.fleets-section': ComponentsFleetsSection;
+      'components.footerheading': ComponentsFooterheading;
       'components.hero': ComponentsHero;
       'components.hero-section': ComponentsHeroSection;
+      'components.main-multi-data': ComponentsMainMultiData;
       'components.main-route': ComponentsMainRoute;
+      'components.major-route-grids': ComponentsMajorRouteGrids;
+      'components.multi-data': ComponentsMultiData;
+      'components.review': ComponentsReview;
       'components.routes-desgin': ComponentsRoutesDesgin;
       'components.seo-tags': ComponentsSeoTags;
       'components.service': ComponentsService;
       'components.service-card': ComponentsServiceCard;
       'components.services-grid': ComponentsServicesGrid;
       'components.side-section': ComponentsSideSection;
-      'elements.link': ElementsLink;
-      'elements.logo': ElementsLogo;
-      'template1.grid-card': Template1GridCard;
-      'template1.hero-section': Template1HeroSection;
-      'template1.page-js': Template1PageJs;
-      'template1.service-intro': Template1ServiceIntro;
-      'template1.side-section': Template1SideSection;
-      'template2.page-js': Template2PageJs;
     }
   }
 }

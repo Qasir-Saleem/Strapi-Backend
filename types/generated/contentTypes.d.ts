@@ -430,88 +430,66 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAirportPageAirportPage extends Struct.CollectionTypeSchema {
-  collectionName: 'airport_pages';
+export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
+  collectionName: 'car_services';
   info: {
-    displayName: 'Airport Page';
-    pluralName: 'airport-pages';
-    singularName: 'airport-page';
+    displayName: 'Car Service';
+    pluralName: 'car-services';
+    singularName: 'car-service';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    airportsection: Schema.Attribute.Component<
-      'components.airportsection',
-      false
-    >;
     cannonicalUrl: Schema.Attribute.String;
-    contactUs: Schema.Attribute.Component<'components.airportsection', false>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    Faq: Schema.Attribute.Component<'components.faq', false>;
-    Hero_Section: Schema.Attribute.Component<'components.hero', false>;
-    IconsSection: Schema.Attribute.Component<'components.first-icons', false>;
-    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    JfkAirports: Schema.Attribute.Component<'components.first-icons', false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::airport-page.airport-page'
-    > &
-      Schema.Attribute.Private;
-    Meta_Description: Schema.Attribute.Text;
-    Meta_Title: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    SideSection: Schema.Attribute.Component<'template1.side-section', false>;
-    title: Schema.Attribute.String;
-    TravelSection: Schema.Attribute.Component<
-      'components.airportsection',
+    CarService: Schema.Attribute.Component<'components.fleets-section', false>;
+    ContactUs: Schema.Attribute.Component<
+      'components.faq-image-section',
       false
     >;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiCityPageCityPage extends Struct.CollectionTypeSchema {
-  collectionName: 'city_pages';
-  info: {
-    displayName: 'City Page';
-    pluralName: 'city-pages';
-    singularName: 'city-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    city: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    Faq: Schema.Attribute.Component<'components.faq', false>;
-    Faqimage: Schema.Attribute.Component<'components.faq-image-section', false>;
+    CtaBanner: Schema.Attribute.Component<'components.cta-banner', false>;
+    faq: Schema.Attribute.Component<'components.faq', false>;
     Fleetsection: Schema.Attribute.Component<
       'components.fleets-section',
       false
     >;
-    Hero_Section: Schema.Attribute.Component<'components.hero-section', true>;
+    footer_heading: Schema.Attribute.Component<
+      'components.footerheading',
+      false
+    >;
+    FromCean: Schema.Attribute.Component<'components.faq-image-section', false>;
+    HeroSections: Schema.Attribute.Component<'components.hero-section', false>;
+    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::city-page.city-page'
+      'api::car-service.car-service'
     > &
       Schema.Attribute.Private;
-    MainRoute: Schema.Attribute.Component<'components.main-route', false>;
+    MajarRouteGrid: Schema.Attribute.Component<
+      'components.major-route-grids',
+      false
+    >;
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    multidata: Schema.Attribute.Component<'components.main-multi-data', false>;
+    palmbeach: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    Seo: Schema.Attribute.Component<'components.seo-tags', false>;
-    ServiceCard: Schema.Attribute.Component<'components.services-grid', true>;
-    SideSection: Schema.Attribute.Component<'template1.side-section', true>;
+    Reliable: Schema.Attribute.Component<'components.fleets-section', false>;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Routes: Schema.Attribute.Component<'components.main-route', false>;
+    SeamLessCruise: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
     slug: Schema.Attribute.UID;
-    Slug_Active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    state: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -530,9 +508,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      ['blocks.info-block', 'blocks.hero-section']
-    >;
+    blocks: Schema.Attribute.DynamicZone<[]>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1099,8 +1075,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::airport-page.airport-page': ApiAirportPageAirportPage;
-      'api::city-page.city-page': ApiCityPageCityPage;
+      'api::car-service.car-service': ApiCarServiceCarService;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::service.service': ApiServiceService;
       'plugin::content-releases.release': PluginContentReleasesRelease;

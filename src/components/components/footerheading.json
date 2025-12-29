@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_footerheadings",
+  "info": {
+    "displayName": "footerheading"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "title_two": {
+      "type": "string"
+    },
+    "richtext": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

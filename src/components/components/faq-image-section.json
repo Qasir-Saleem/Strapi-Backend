@@ -8,9 +8,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "richtext": {
       "type": "blocks"
     },
@@ -25,6 +22,12 @@
       "type": "component",
       "component": "components.faq-data",
       "repeatable": true
+    },
+    "form_title": {
+      "type": "string"
+    },
+    "form_description": {
+      "type": "string"
     }
   },
   "config": {}

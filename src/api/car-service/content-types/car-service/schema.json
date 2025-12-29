@@ -1,0 +1,112 @@
+{
+  "kind": "collectionType",
+  "collectionName": "car_services",
+  "info": {
+    "singularName": "car-service",
+    "pluralName": "car-services",
+    "displayName": "Car Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Meta_Title": {
+      "type": "string"
+    },
+    "Meta_Description": {
+      "type": "string"
+    },
+    "cannonicalUrl": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "IsActive": {
+      "type": "boolean",
+      "default": false
+    },
+    "HeroSections": {
+      "type": "component",
+      "component": "components.hero-section",
+      "repeatable": false
+    },
+    "Review": {
+      "type": "component",
+      "component": "components.review",
+      "repeatable": false
+    },
+    "Fleetsection": {
+      "type": "component",
+      "component": "components.fleets-section",
+      "repeatable": false
+    },
+    "Reliable": {
+      "type": "component",
+      "component": "components.fleets-section",
+      "repeatable": false
+    },
+    "CarService": {
+      "type": "component",
+      "component": "components.fleets-section",
+      "repeatable": false
+    },
+    "FromCean": {
+      "type": "component",
+      "component": "components.faq-image-section",
+      "repeatable": false
+    },
+    "Routes": {
+      "type": "component",
+      "component": "components.main-route",
+      "repeatable": false
+    },
+    "CtaBanner": {
+      "type": "component",
+      "component": "components.cta-banner",
+      "repeatable": false
+    },
+    "SeamLessCruise": {
+      "type": "component",
+      "component": "components.faq-image-section",
+      "repeatable": false
+    },
+    "MajarRouteGrid": {
+      "type": "component",
+      "component": "components.major-route-grids",
+      "repeatable": false
+    },
+    "ContactUs": {
+      "type": "component",
+      "component": "components.faq-image-section",
+      "repeatable": false
+    },
+    "palmbeach": {
+      "type": "component",
+      "component": "components.faq-image-section",
+      "repeatable": false
+    },
+    "multidata": {
+      "type": "component",
+      "component": "components.main-multi-data",
+      "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "components.faq",
+      "repeatable": false
+    },
+    "footer_heading": {
+      "type": "component",
+      "component": "components.footerheading",
+      "repeatable": false
+    }
+  }
+}

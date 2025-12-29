@@ -8,14 +8,21 @@
     "routename": {
       "type": "string"
     },
+    "richtext": {
+      "type": "blocks"
+    },
     "time": {
       "type": "string"
     },
     "distance": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   },
   "config": {}

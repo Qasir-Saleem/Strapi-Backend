@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_cta_banners",
+  "info": {
+    "displayName": "CtaBanner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "richtext": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

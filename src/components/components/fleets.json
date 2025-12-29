@@ -8,13 +8,10 @@
     "Title": {
       "type": "string"
     },
-    "Description": {
-      "type": "text"
-    },
     "richtext": {
       "type": "blocks"
     },
-    "Fleet": {
+    "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

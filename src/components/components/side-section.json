@@ -8,8 +8,11 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "richtext": {
+      "type": "blocks"
+    },
+    "title_two": {
+      "type": "string"
     },
     "image": {
       "type": "media",

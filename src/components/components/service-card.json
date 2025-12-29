@@ -18,9 +18,6 @@
     "altstext": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "richtext": {
       "type": "blocks"
     }

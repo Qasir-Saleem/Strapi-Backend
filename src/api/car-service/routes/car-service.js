@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * city-page router
+ * car-service router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::city-page.city-page');
+module.exports = createCoreRouter('api::car-service.car-service');

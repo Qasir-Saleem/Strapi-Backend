@@ -11,17 +11,11 @@
     "descriptio1": {
       "type": "text"
     },
-    "description": {
-      "type": "blocks"
-    },
-    "bgImage": {
+    "BgCover_1920x600": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "altTags": {
@@ -29,13 +23,6 @@
     },
     "ImageTitlte": {
       "type": "text"
-    },
-    "bgimage1": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
     }
   },
   "config": {}

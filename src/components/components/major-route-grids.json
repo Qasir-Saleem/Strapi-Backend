@@ -1,19 +1,22 @@
 {
-  "collectionName": "components_components_fleets_sections",
+  "collectionName": "components_components_major_route_grids",
   "info": {
-    "displayName": "FleetsSection"
+    "displayName": "MajorRouteGrids"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
+    "titlebasker": {
+      "type": "string"
+    },
     "richtext": {
       "type": "blocks"
     },
-    "Fleet": {
+    "cards": {
       "type": "component",
-      "component": "components.fleets",
+      "component": "components.routes-desgin",
       "repeatable": true
     }
   },

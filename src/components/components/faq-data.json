@@ -13,6 +13,13 @@
     },
     "richtext": {
       "type": "blocks"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   },
   "config": {}
