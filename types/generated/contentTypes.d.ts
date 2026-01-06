@@ -468,8 +468,8 @@ export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
       false
     >;
     Events_section: Schema.Attribute.Component<
-      'components.faq-image-section',
-      false
+      'components.main-multi-data',
+      true
     >;
     faq: Schema.Attribute.Component<'components.faq', false>;
     footer_heading: Schema.Attribute.Component<

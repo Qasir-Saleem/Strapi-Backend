@@ -90,8 +90,8 @@
     },
     "Events_section": {
       "type": "component",
-      "component": "components.faq-image-section",
-      "repeatable": false
+      "component": "components.main-multi-data",
+      "repeatable": true
     },
     "Celebration_section": {
       "type": "component",
