@@ -43,27 +43,27 @@
       "component": "components.review",
       "repeatable": false
     },
-    "Fleetsection": {
+    "USPs": {
       "type": "component",
       "component": "components.fleets-section",
       "repeatable": false
     },
-    "Reliable": {
+    "Client_Section": {
       "type": "component",
       "component": "components.fleets-section",
       "repeatable": false
     },
-    "CarService": {
+    "Services_Section": {
       "type": "component",
       "component": "components.fleets-section",
       "repeatable": false
     },
-    "FromCean": {
+    "Destination_section": {
       "type": "component",
       "component": "components.faq-image-section",
       "repeatable": false
     },
-    "Routes": {
+    "Airport_section": {
       "type": "component",
       "component": "components.main-route",
       "repeatable": false
@@ -73,27 +73,27 @@
       "component": "components.cta-banner",
       "repeatable": false
     },
-    "SeamLessCruise": {
+    "Cruise_Port": {
       "type": "component",
       "component": "components.faq-image-section",
       "repeatable": false
     },
-    "MajarRouteGrid": {
+    "Routes_section": {
       "type": "component",
       "component": "components.major-route-grids",
       "repeatable": false
     },
-    "ContactUs": {
+    "Corporate_section": {
       "type": "component",
       "component": "components.faq-image-section",
       "repeatable": false
     },
-    "palmbeach": {
+    "Events_section": {
       "type": "component",
       "component": "components.faq-image-section",
       "repeatable": false
     },
-    "multidata": {
+    "Celebration_section": {
       "type": "component",
       "component": "components.main-multi-data",
       "repeatable": false

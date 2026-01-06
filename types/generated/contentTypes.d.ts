@@ -441,26 +441,41 @@ export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Airport_section: Schema.Attribute.Component<'components.main-route', false>;
     cannonicalUrl: Schema.Attribute.String;
-    CarService: Schema.Attribute.Component<'components.fleets-section', false>;
-    ContactUs: Schema.Attribute.Component<
+    Celebration_section: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Client_Section: Schema.Attribute.Component<
+      'components.fleets-section',
+      false
+    >;
+    Corporate_section: Schema.Attribute.Component<
       'components.faq-image-section',
       false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CtaBanner: Schema.Attribute.Component<'components.cta-banner', false>;
-    faq: Schema.Attribute.Component<'components.faq', false>;
-    Fleetsection: Schema.Attribute.Component<
-      'components.fleets-section',
+    Cruise_Port: Schema.Attribute.Component<
+      'components.faq-image-section',
       false
     >;
+    CtaBanner: Schema.Attribute.Component<'components.cta-banner', false>;
+    Destination_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    Events_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    faq: Schema.Attribute.Component<'components.faq', false>;
     footer_heading: Schema.Attribute.Component<
       'components.footerheading',
       false
     >;
-    FromCean: Schema.Attribute.Component<'components.faq-image-section', false>;
     HeroSections: Schema.Attribute.Component<'components.hero-section', false>;
     IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -469,23 +484,16 @@ export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
       'api::car-service.car-service'
     > &
       Schema.Attribute.Private;
-    MajarRouteGrid: Schema.Attribute.Component<
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Routes_section: Schema.Attribute.Component<
       'components.major-route-grids',
       false
     >;
-    Meta_Description: Schema.Attribute.String;
-    Meta_Title: Schema.Attribute.String;
-    multidata: Schema.Attribute.Component<'components.main-multi-data', false>;
-    palmbeach: Schema.Attribute.Component<
-      'components.faq-image-section',
-      false
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    Reliable: Schema.Attribute.Component<'components.fleets-section', false>;
-    Review: Schema.Attribute.Component<'components.review', false>;
-    Routes: Schema.Attribute.Component<'components.main-route', false>;
-    SeamLessCruise: Schema.Attribute.Component<
-      'components.faq-image-section',
+    Services_Section: Schema.Attribute.Component<
+      'components.fleets-section',
       false
     >;
     slug: Schema.Attribute.UID;
@@ -494,6 +502,7 @@ export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    USPs: Schema.Attribute.Component<'components.fleets-section', false>;
   };
 }
 
@@ -530,7 +539,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
 export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
-    displayName: 'State Page';
+    displayName: 'airport car service';
     pluralName: 'services';
     singularName: 'service';
   };

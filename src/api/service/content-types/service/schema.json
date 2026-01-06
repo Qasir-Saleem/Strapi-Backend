@@ -4,7 +4,7 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "State Page"
+    "displayName": "airport car service"
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +14,11 @@
     "slug": {
       "type": "uid"
     },
+    "HeroSections": {
+      "type": "component",
+      "component": "components.service",
+      "repeatable": false
+    },
     "States": {
       "type": "string"
     },
@@ -21,11 +26,6 @@
       "type": "boolean",
       "required": true,
       "default": false
-    },
-    "HeroSections": {
-      "type": "component",
-      "component": "components.service",
-      "repeatable": false
     },
     "ServiceCard": {
       "type": "component",
