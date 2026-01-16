@@ -25,6 +25,9 @@
       "type": "component",
       "component": "components.multi-data",
       "repeatable": true
+    },
+    "BottomText": {
+      "type": "blocks"
     }
   },
   "config": {}

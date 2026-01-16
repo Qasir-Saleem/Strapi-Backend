@@ -8,10 +8,16 @@
     "title": {
       "type": "string"
     },
+    "description": {
+      "type": "string"
+    },
     "faq": {
       "type": "component",
       "component": "components.faq-data",
       "repeatable": true
+    },
+    "richtext": {
+      "type": "blocks"
     }
   },
   "config": {}

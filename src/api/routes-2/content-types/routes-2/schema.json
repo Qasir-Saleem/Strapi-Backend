@@ -1,17 +1,17 @@
 {
   "kind": "collectionType",
-  "collectionName": "car_services",
+  "collectionName": "routes_2s",
   "info": {
-    "singularName": "car-service",
-    "pluralName": "car-services",
-    "displayName": "Car Service"
+    "singularName": "routes-2",
+    "pluralName": "routes-2s",
+    "displayName": "Routes_2"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
     "Meta_Title": {
@@ -23,17 +23,21 @@
     "cannonicalUrl": {
       "type": "string"
     },
-    "state": {
+    "Path_1": {
       "type": "string"
     },
-    "slug": {
+    "Path_2": {
       "type": "uid"
     },
     "IsActive": {
       "type": "boolean",
       "default": false
     },
-    "HeroSections": {
+    "IsIndex": {
+      "type": "boolean",
+      "default": false
+    },
+    "Hero_Section": {
       "type": "component",
       "component": "components.hero-section",
       "repeatable": false
@@ -43,37 +47,32 @@
       "component": "components.review",
       "repeatable": false
     },
-    "USPs": {
+    "Route_Intro": {
       "type": "component",
-      "component": "components.fleets-section",
+      "component": "components.destination-section",
       "repeatable": false
     },
-    "Client_Section": {
+    "USP_Section": {
       "type": "component",
-      "component": "components.fleets-section",
+      "component": "components.services-grid",
       "repeatable": false
     },
-    "Services_Section": {
+    "Midway_Stops": {
       "type": "component",
-      "component": "components.fleets-section",
+      "component": "components.main-multi-data",
       "repeatable": false
     },
-    "Destination_section": {
+    "Destinations": {
       "type": "component",
-      "component": "components.faq-image-section",
+      "component": "components.main-multi-data",
       "repeatable": false
     },
-    "Airport_section": {
+    "Airport_CruisePort": {
       "type": "component",
-      "component": "components.main-route",
+      "component": "components.main-multi-data",
       "repeatable": false
     },
-    "CtaBanner": {
-      "type": "component",
-      "component": "components.cta-banner",
-      "repeatable": false
-    },
-    "Cruise_Port": {
+    "Corporate_section": {
       "type": "component",
       "component": "components.faq-image-section",
       "repeatable": false
@@ -83,22 +82,17 @@
       "component": "components.major-route-grids",
       "repeatable": false
     },
-    "Corporate_section": {
+    "Fleet_Section": {
+      "type": "component",
+      "component": "components.fleets-section",
+      "repeatable": false
+    },
+    "Services": {
       "type": "component",
       "component": "components.faq-image-section",
       "repeatable": false
     },
-    "Events_section": {
-      "type": "component",
-      "component": "components.main-multi-data",
-      "repeatable": true
-    },
-    "Celebration_section": {
-      "type": "component",
-      "component": "components.main-multi-data",
-      "repeatable": false
-    },
-    "faq": {
+    "Faq": {
       "type": "component",
       "component": "components.faq",
       "repeatable": false
@@ -107,10 +101,6 @@
       "type": "component",
       "component": "components.footerheading",
       "repeatable": false
-    },
-    "IsIndex": {
-      "type": "boolean",
-      "default": false
     }
   }
 }

@@ -8,6 +8,9 @@
     "heading": {
       "type": "string"
     },
+    "baskerTitle": {
+      "type": "string"
+    },
     "subheading": {
       "type": "blocks"
     },

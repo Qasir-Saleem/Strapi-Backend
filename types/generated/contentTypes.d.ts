@@ -430,6 +430,152 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAirportCarServiceAirportCarService
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'airport_car_services';
+  info: {
+    displayName: 'airport car service';
+    pluralName: 'airport-car-services';
+    singularName: 'airport-car-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    About_s: Schema.Attribute.Component<'components.main-multi-data', false>;
+    Airports_connection: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    Amenities: Schema.Attribute.Component<'components.main-multi-data', false>;
+    Arrivals_Departures: Schema.Attribute.Component<
+      'components.multi-data',
+      false
+    >;
+    cannonicalUrl: Schema.Attribute.String;
+    Corporate_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Destination_section: Schema.Attribute.Component<
+      'components.destination-section',
+      false
+    >;
+    Faq: Schema.Attribute.Component<'components.faq', false>;
+    Fleet_Section: Schema.Attribute.Component<
+      'components.fleets-section',
+      false
+    >;
+    footer_heading: Schema.Attribute.Component<
+      'components.footerheading',
+      false
+    >;
+    Hero_Section: Schema.Attribute.Component<'components.hero-section', false>;
+    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    IsIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::airport-car-service.airport-car-service'
+    > &
+      Schema.Attribute.Private;
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    Page_Title: Schema.Attribute.String;
+    Path_1: Schema.Attribute.String;
+    Path_2: Schema.Attribute.String;
+    Path_3: Schema.Attribute.UID<''>;
+    publishedAt: Schema.Attribute.DateTime;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Routes_section: Schema.Attribute.Component<
+      'components.major-route-grids',
+      false
+    >;
+    Services: Schema.Attribute.Component<'components.faq-image-section', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    USP_Section: Schema.Attribute.Component<'components.services-grid', false>;
+  };
+}
+
+export interface ApiAirportRouteOneAirportRouteOne
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'airport_route_ones';
+  info: {
+    displayName: 'Airport Route One';
+    pluralName: 'airport-route-ones';
+    singularName: 'airport-route-one';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Airport_Arrival: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Airport_CruisePort: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    cannonicalUrl: Schema.Attribute.String;
+    Corporate_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    CtaBanner: Schema.Attribute.Component<'components.cta-banner', false>;
+    Destination_section: Schema.Attribute.Component<
+      'components.destination-section',
+      false
+    >;
+    Faq: Schema.Attribute.Component<'components.faq', false>;
+    Fleet_Section: Schema.Attribute.Component<
+      'components.fleets-section',
+      false
+    >;
+    footer_heading: Schema.Attribute.Component<
+      'components.footerheading',
+      false
+    >;
+    Hero_Section: Schema.Attribute.Component<'components.hero-section', false>;
+    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    IsIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::airport-route-one.airport-route-one'
+    > &
+      Schema.Attribute.Private;
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    Midway_Stops: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Path_1: Schema.Attribute.String;
+    Path_2: Schema.Attribute.UID;
+    publishedAt: Schema.Attribute.DateTime;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Routes_section: Schema.Attribute.Component<
+      'components.major-route-grids',
+      false
+    >;
+    Services: Schema.Attribute.Component<'components.faq-image-section', false>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    USP_Section: Schema.Attribute.Component<'components.services-grid', false>;
+  };
+}
+
 export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
   collectionName: 'car_services';
   info: {
@@ -478,6 +624,7 @@ export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
     >;
     HeroSections: Schema.Attribute.Component<'components.hero-section', false>;
     IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    IsIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -503,6 +650,75 @@ export interface ApiCarServiceCarService extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     USPs: Schema.Attribute.Component<'components.fleets-section', false>;
+  };
+}
+
+export interface ApiChauffeurServiceOneChauffeurServiceOne
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'chauffeur_service_ones';
+  info: {
+    displayName: 'Chauffeur Service_One';
+    pluralName: 'chauffeur-service-ones';
+    singularName: 'chauffeur-service-one';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Airport_Intro: Schema.Attribute.Component<
+      'components.destination-section',
+      false
+    >;
+    Branding_Section: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    cannonicalUrl: Schema.Attribute.String;
+    Chauffeur_Partner: Schema.Attribute.Component<
+      'routes-components.usp-section',
+      false
+    >;
+    Corporate_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Faq: Schema.Attribute.Component<'components.faq', false>;
+    Fleet_Section: Schema.Attribute.Component<
+      'components.fleets-section',
+      false
+    >;
+    footer_heading: Schema.Attribute.Component<
+      'components.footerheading',
+      false
+    >;
+    Hero_Section: Schema.Attribute.Component<'components.hero-section', false>;
+    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    IsIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::chauffeur-service-one.chauffeur-service-one'
+    > &
+      Schema.Attribute.Private;
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    Path_1: Schema.Attribute.String;
+    Path_2: Schema.Attribute.UID;
+    publishedAt: Schema.Attribute.DateTime;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Routes_section: Schema.Attribute.Component<
+      'components.major-route-grids',
+      false
+    >;
+    Services: Schema.Attribute.Component<'components.faq-image-section', false>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    USP_Section: Schema.Attribute.Component<'components.services-grid', false>;
   };
 }
 
@@ -536,41 +752,216 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiServiceService extends Struct.CollectionTypeSchema {
-  collectionName: 'services';
+export interface ApiRoute1Route1 extends Struct.CollectionTypeSchema {
+  collectionName: 'route_1s';
   info: {
-    displayName: 'airport car service';
-    pluralName: 'services';
-    singularName: 'service';
+    displayName: 'route_1';
+    pluralName: 'route-1s';
+    singularName: 'route-1';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    active: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
-    contactUs: Schema.Attribute.Component<'components.contact-us', false>;
+    Airport_CruisePort: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    cannonicalUrl: Schema.Attribute.String;
+    Corporate_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Faq: Schema.Attribute.Component<'components.faq', true>;
-    HeroSections: Schema.Attribute.Component<'components.service', false>;
+    Destinations: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Faq: Schema.Attribute.Component<'components.faq', false>;
+    Fleet_Section: Schema.Attribute.Component<
+      'components.fleets-section',
+      false
+    >;
+    footer_heading: Schema.Attribute.Component<
+      'components.footerheading',
+      false
+    >;
+    Hero_Section: Schema.Attribute.Component<'components.hero-section', false>;
+    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    IsIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::service.service'
+      'api::route-1.route-1'
     > &
       Schema.Attribute.Private;
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    Midway_Stops: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Path_1: Schema.Attribute.String;
+    Path_2: Schema.Attribute.UID;
     publishedAt: Schema.Attribute.DateTime;
-    SeoTags: Schema.Attribute.Component<'components.seo-tags', true>;
-    ServiceCard: Schema.Attribute.Component<'components.services-grid', true>;
-    SideSection: Schema.Attribute.Component<'components.side-section', false>;
-    slug: Schema.Attribute.UID;
-    States: Schema.Attribute.String;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Route_Intro: Schema.Attribute.Component<
+      'components.destination-section',
+      false
+    >;
+    Routes_section: Schema.Attribute.Component<
+      'components.major-route-grids',
+      false
+    >;
+    Services: Schema.Attribute.Component<'components.faq-image-section', false>;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    USP_Section: Schema.Attribute.Component<'components.services-grid', false>;
+  };
+}
+
+export interface ApiRoutes2Routes2 extends Struct.CollectionTypeSchema {
+  collectionName: 'routes_2s';
+  info: {
+    displayName: 'Routes_2';
+    pluralName: 'routes-2s';
+    singularName: 'routes-2';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Airport_CruisePort: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    cannonicalUrl: Schema.Attribute.String;
+    Corporate_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Destinations: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Faq: Schema.Attribute.Component<'components.faq', false>;
+    Fleet_Section: Schema.Attribute.Component<
+      'components.fleets-section',
+      false
+    >;
+    footer_heading: Schema.Attribute.Component<
+      'components.footerheading',
+      false
+    >;
+    Hero_Section: Schema.Attribute.Component<'components.hero-section', false>;
+    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    IsIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::routes-2.routes-2'
+    > &
+      Schema.Attribute.Private;
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    Midway_Stops: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Path_1: Schema.Attribute.String;
+    Path_2: Schema.Attribute.UID;
+    publishedAt: Schema.Attribute.DateTime;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Route_Intro: Schema.Attribute.Component<
+      'components.destination-section',
+      false
+    >;
+    Routes_section: Schema.Attribute.Component<
+      'components.major-route-grids',
+      false
+    >;
+    Services: Schema.Attribute.Component<'components.faq-image-section', false>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    USP_Section: Schema.Attribute.Component<'components.services-grid', false>;
+  };
+}
+
+export interface ApiRoutes3Routes3 extends Struct.CollectionTypeSchema {
+  collectionName: 'routes_3s';
+  info: {
+    displayName: 'Routes_3';
+    pluralName: 'routes-3s';
+    singularName: 'routes-3';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Airport_CruisePort: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    cannonicalUrl: Schema.Attribute.String;
+    Corporate_section: Schema.Attribute.Component<
+      'components.faq-image-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    CtaBanner: Schema.Attribute.Component<'components.cta-banner', false>;
+    Destinations: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Faq: Schema.Attribute.Component<'components.faq', false>;
+    Fleet_Section: Schema.Attribute.Component<
+      'components.fleets-section',
+      false
+    >;
+    footer_heading: Schema.Attribute.Component<
+      'components.footerheading',
+      false
+    >;
+    Hero_Section: Schema.Attribute.Component<'components.hero-section', false>;
+    IsActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    IsIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::routes-3.routes-3'
+    > &
+      Schema.Attribute.Private;
+    Meta_Description: Schema.Attribute.String;
+    Meta_Title: Schema.Attribute.String;
+    Midway_Stops: Schema.Attribute.Component<
+      'components.main-multi-data',
+      false
+    >;
+    Path_1: Schema.Attribute.String;
+    Path_2: Schema.Attribute.UID;
+    publishedAt: Schema.Attribute.DateTime;
+    Review: Schema.Attribute.Component<'components.review', false>;
+    Route_Intro: Schema.Attribute.Component<
+      'components.destination-section',
+      false
+    >;
+    Services: Schema.Attribute.Component<'components.faq-image-section', false>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    USP_Section: Schema.Attribute.Component<'components.services-grid', false>;
   };
 }
 
@@ -1084,9 +1475,14 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::airport-car-service.airport-car-service': ApiAirportCarServiceAirportCarService;
+      'api::airport-route-one.airport-route-one': ApiAirportRouteOneAirportRouteOne;
       'api::car-service.car-service': ApiCarServiceCarService;
+      'api::chauffeur-service-one.chauffeur-service-one': ApiChauffeurServiceOneChauffeurServiceOne;
       'api::home-page.home-page': ApiHomePageHomePage;
-      'api::service.service': ApiServiceService;
+      'api::route-1.route-1': ApiRoute1Route1;
+      'api::routes-2.routes-2': ApiRoutes2Routes2;
+      'api::routes-3.routes-3': ApiRoutes3Routes3;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

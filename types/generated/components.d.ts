@@ -50,6 +50,19 @@ export interface ComponentsCtaBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsDestinationSection extends Struct.ComponentSchema {
+  collectionName: 'components_components_destination_section_s';
+  info: {
+    displayName: 'destination_section ';
+  };
+  attributes: {
+    baskervvile: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    richtext: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsFaq extends Struct.ComponentSchema {
   collectionName: 'components_components_faqs';
   info: {
@@ -86,6 +99,7 @@ export interface ComponentsFaqImageSection extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images', true>;
     richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
+    titleBasker: Schema.Attribute.String;
   };
 }
 
@@ -108,7 +122,10 @@ export interface ComponentsFleets extends Struct.ComponentSchema {
     displayName: 'Fleets';
   };
   attributes: {
+    description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
+    lagguge: Schema.Attribute.String;
+    person: Schema.Attribute.String;
     richtext: Schema.Attribute.Blocks;
     Title: Schema.Attribute.String;
   };
@@ -123,6 +140,7 @@ export interface ComponentsFleetsSection extends Struct.ComponentSchema {
     Fleet: Schema.Attribute.Component<'components.fleets', true>;
     richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
+    titleBasker: Schema.Attribute.Text;
   };
 }
 
@@ -170,6 +188,7 @@ export interface ComponentsMainMultiData extends Struct.ComponentSchema {
     displayName: 'mainMultiData';
   };
   attributes: {
+    BottomText: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     multi: Schema.Attribute.Component<'components.multi-data', true>;
     richtext: Schema.Attribute.Blocks;
@@ -208,7 +227,9 @@ export interface ComponentsMultiData extends Struct.ComponentSchema {
     displayName: 'multiData';
   };
   attributes: {
+    description: Schema.Attribute.String;
     faq: Schema.Attribute.Component<'components.faq-data', true>;
+    richtext: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }
@@ -284,6 +305,7 @@ export interface ComponentsServicesGrid extends Struct.ComponentSchema {
     displayName: 'ServicesGrid';
   };
   attributes: {
+    baskerTitle: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     ServiceCard: Schema.Attribute.Component<'components.service-card', true>;
     subheading: Schema.Attribute.Blocks;
@@ -304,6 +326,42 @@ export interface ComponentsSideSection extends Struct.ComponentSchema {
   };
 }
 
+export interface RoutesComponentsCards extends Struct.ComponentSchema {
+  collectionName: 'components_routes_components_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images', true>;
+    richtext: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface RoutesComponentsRoutes extends Struct.ComponentSchema {
+  collectionName: 'components_routes_components_routes';
+  info: {
+    displayName: 'Routes';
+  };
+  attributes: {};
+}
+
+export interface RoutesComponentsUspSection extends Struct.ComponentSchema {
+  collectionName: 'components_routes_components_usp_sections';
+  info: {
+    displayName: 'USP_Section';
+  };
+  attributes: {
+    baskerTitle: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    cards: Schema.Attribute.Component<'routes-components.cards', true>;
+    image: Schema.Attribute.Media<'images'>;
+    richtext: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+    title_two: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -311,6 +369,7 @@ declare module '@strapi/strapi' {
       'components.airportsection': ComponentsAirportsection;
       'components.contact-us': ComponentsContactUs;
       'components.cta-banner': ComponentsCtaBanner;
+      'components.destination-section': ComponentsDestinationSection;
       'components.faq': ComponentsFaq;
       'components.faq-data': ComponentsFaqData;
       'components.faq-image-section': ComponentsFaqImageSection;
@@ -331,6 +390,9 @@ declare module '@strapi/strapi' {
       'components.service-card': ComponentsServiceCard;
       'components.services-grid': ComponentsServicesGrid;
       'components.side-section': ComponentsSideSection;
+      'routes-components.cards': RoutesComponentsCards;
+      'routes-components.routes': RoutesComponentsRoutes;
+      'routes-components.usp-section': RoutesComponentsUspSection;
     }
   }
 }

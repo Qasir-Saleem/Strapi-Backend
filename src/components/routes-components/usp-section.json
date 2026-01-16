@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_routes_components_usp_sections",
+  "info": {
+    "displayName": "USP_Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "title_two": {
+      "type": "string"
+    },
+    "baskerTitle": {
+      "type": "string"
+    },
+    "richtext": {
+      "type": "blocks"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "routes-components.cards",
+      "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

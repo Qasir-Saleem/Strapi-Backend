@@ -1,15 +1,15 @@
 {
-  "collectionName": "components_components_fleets",
+  "collectionName": "components_components_destination_section_s",
   "info": {
-    "displayName": "Fleets"
+    "displayName": "destination_section "
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "baskervvile": {
+      "type": "string"
     },
     "richtext": {
       "type": "blocks"
@@ -20,12 +20,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "person": {
-      "type": "string"
-    },
-    "lagguge": {
-      "type": "string"
     }
   },
   "config": {}
