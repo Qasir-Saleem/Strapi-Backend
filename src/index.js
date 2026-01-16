@@ -16,5 +16,11 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
+
+
+//  local data transfer from strapi to cloud 
+
+  // yarn strapi transfer --help
+  
   bootstrap(/*{ strapi }*/) {},
 };
